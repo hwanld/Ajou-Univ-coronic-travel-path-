@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!--이 파일은 유니코드로 이루어져있음-->
+    <meta charset="UTF-8">
+    <!--HTML 간단한 설명 및 검색 엔진에 검색이 잘 되도록 하는 코드-->
+    <meta name="description" content="아주대학교 코로나19 교내 확진자 이동경로 및 현황 ">
+    <meta name="keywords" content="아주대학교, 코로나19, 아주대 교내 확진자, 아주대 코로나">
+    <meta name="author" content="이동환, 김규래">
+    <!--viewport에 관한 설정. height는 크게 상관이 없기 때문에 설정 X, width는 device-width로 설정, 확대 및 축소는 불가능하게 설정-->
+    <meta name="viewport"
+        content="width=device-width, user-scalable-no, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <!--IE 반응성 설정 코드-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--탭에서 나오는 사이트의 제목-->
+    <title>아주대학교 코로나19</title>
+
+    <!--Open Graph (Facebook, Linkedin)-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="아주대학교 코로나19 교내 확진자 이동경로 및 현황 사이트입니다">
+    <meta property="og:description" content="아주대학교 코로나19 교내 확진자 이동경로 및 현황을 보여주는 프로젝트 사이드 입니다">
+    <meta property="og:image" content="img/ajou-univ-logo.jpg">
+    <meta property="og:url" content="https://www.ajou.ac.kr/">
+    <meta property="og:site_name" content="아주대학교 코로나19">
+
+    <!--twitter card (Twitter)-->
+    <meta name="twitter:card" content="summary">
+    <!--card 종류: summary, photo, player-->
+    <meta name="twitter:title" content="아주대학교 코로나19 교내 확진자 이동경로 및 현황 사이트입니다">
+    <meta name="twitter:description" content="아주대학교 코로나19 교내 확진자 이동경로 및 현황을 보여주는 프로젝트 사이드 입니다">
+    <meta name="twitter:image" content="img/ajou-univ-logo.jpg">
+    <meta name="twitter:url" content="https://www.ajou.ac.kr/">
+    <meta name="twitter:creator" content="아주대학교 코로나19">
+
+    <!--일반적인 favicon 설정_파비콘 만들기 검색-->
+    <link rel="icon" href="img/ajou-univ-fabicon.ico">
+    <!--아이폰용 fabicon 설정-->
+    <link rel="apple-touch-icon" href="img/ajou-univ-fabicon.ico">
+    <!--IE용 fabicon 설정-->
+    <link rel="short icon" type="image/x-icon" href="img/ajou-univ-fabicon.ico">
+
+    <!--CSS Reset_웹브라우저별 스타일 설정 초기화 : 최상단에 적기-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--fontaswsome-->
+    <script src="https://kit.fontawesome.com/68b81c806a.js" crossorigin="anonymous"></script>
+    <!--font: Spoca Han sans Neo-->
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!--CSS 작명 규칙 (BEM:Block Element Modifier)-->
+<!-- - : 단어와 단어 사이에는 하이픈 (예 : head-container-blue)-->
+<!-- _ : ~의 하위 요소 (예 : head-container_head-brand)-->
+<!-- -- : ~의 상태를 나타낼 때 (예 : head-containner_head-brand--nolink)-->
+
+<body>
+    <!--Symentic web tag_header,section,aside,footer-->
+    <header>
+        <div class="inner">
+            <div class="head-container">
+                <div class="head-ajou">
+                    <a href="https://www.ajou.ac.kr/kr/ajou/coronavirus-infection-19-school-response-guidance.do"
+                        target="_blank">코로나19 학교 대응 안내</a>
+                </div>
+                <div class="img-container">
+                    <div class="head-img">
+                        <a href="https://www.ajou.ac.kr/kr/index.do" target="_blank">
+                            <img class="head-img" src="img/img-symbol.png" alt="아주대학교 로고">
+                        </a>
+                    </div>
+                    <div class="logo-img">
+                        <a href="https://www.ajou.ac.kr/kr/index.do" target="_blank">
+                            <img class="logo-img" src="img/img-logo.jpg" alt="아주대학교 로고">
+                        </a>
+                    </div>
+                </div>
+                <div class="head-covid19" target="_blank">
+                    <a href="http://ncov.mohw.go.kr/">COVID19 (질병관리청)</a>
+                </div>
+            </div>
+    </header>
+
+    <!--메인 이미지 섹션-->
+    <section class="main">
+        <div class="main-container">
+            <div class="inner">
+                <div class="title-container">
+                    <div class="title">코로나바이러스감염증-19(COVID-19) 교내 확진자 현황</div>
+                    <div class="message">교내 코로나 확진자의 시간 별 이동 경로와 <br>
+                        교내 확진자 발생 현황을 볼 수 있습니다. <br>
+                        하루 빠른 코로나19 종식을 기원합니다.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="inform">
+        <div class="inner">
+            <div class="inform-container">
+                <div class="inform-message">
+                    <a href="https://www.ajou.ac.kr/kr/ajou/confirmed_cases.do?mode=view&articleNo=112197&article.offset=0&articleLimit=10"
+                        target="_blank">
+                        <최근 확진 현황> 2021.08.06(금) 학부생 2명 확진 판정(교내 이동경로:용지관 4층/국제학사 8층)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline">
+        <div class="inner">
+            <div class="timeline-container">
+                <div class="timeline-text">교내 코로나 확진자 이동 경로 조회</div>
+                <div class="timeline-date-container">
+                    <div class="timeline-date">
+                        <select name="year">
+                            <option value="2021">2021</option>
+                        </select>
+                    </div>
+                    <div class="timeline-date">
+
+                        <select name="month">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                    <div class="timeline-date">
+                        <select name="date">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                    </div>
+                    <div class="timeline-icon"><i class="fas fa-search"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        <div class="inner">
+            <img src="img/ajou-map.JPG" alt="ajou-univ-map" class="map-image">
+        </div>
+    </section>
+
+    <section class="notice">
+        <div class="inner">
+            <div class="notice-container">
+                <div class="notice-title">기타 안내사항</div>
+                <div class="notice-message">
+                    <span class="notice-message-amphasize">-실내에서는 반드시 마스크를 착용</span>하여 주시기 바라며, 코로나19 예방수칙(주기적 환기, 손씻기,
+                    기침예절, 승강기 대화금지 등)을 준수하여 주시기 바랍니다.
+                </div>
+                <div class="notice-message">
+                    -체온 37.5℃이상 발열, 인후통, 기침, 근육통 등 의심 증상이 있는 교내 구성원은 지역보건소에서 코로나19 검사를 받으시고 검사 결과가 나올 때까지 반드시 집에서 머물며
+                    타인과의
+                    접촉을 최소화하시기 바랍니다.
+                </div>
+                <div class="notice-message"><span class="notice-message-amphasize">-코로나19 검사 결과 “양성” 판정을 받은 교내 모든
+                        구성원께서는 지체없이 총무팀(T.
+                        031-219-2074)으로 연락주시기 바랍니다.</span></div>
+                <div class="notice-message">-교내 코로나19 담당부서: 총무팀(T. 031-219-2074)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <script scr="js.main/js"></script> : 자바스크립트 임포트, 제일 마지막에 항상 써야 됌-->
+    <footer>
+        <div class="inner">
+            <div class="footer-message">하루 빠른 코로나19 종식을 기원합니다.</div>
+            <div class="footer-contact">E-mail:
+                kamgyul123@ajou.ac.kr&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;E-mail:
+                wkazxf@ajou.ac.kr</div>
+            <div class="footer-copyright">Copyright 2021 © All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+
+</html>
