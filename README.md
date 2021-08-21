@@ -4,7 +4,7 @@
 
 https://wkazxf.github.io/Ajou-Univ-coronic-travel-path-/
 
-<Description>
+Description>
 
 ![image](https://user-images.githubusercontent.com/84431962/130308606-73989357-80bb-44b8-9867-bc9cd5ace276.png)
 
@@ -23,14 +23,14 @@ https://wkazxf.github.io/Ajou-Univ-coronic-travel-path-/
  
  
  
-<Feedback>
+Feedback>
 
 2021.08.21) CSS와 HTML만을 사용해서 우선적인 Layout만 따놓은 상태. JS를 통해서 지도 내부에서 원하는 시간을 설정하는 경우 그에 맞춰서 확진자 이동 경로가 조회되는 것 구현하기.
             현재 모바일에서 "데스크탑으로 보기" 를 사용하지 않는 경우 글자가 전부 깨지는 상황. 추후 반응형에 대해 조금 더 공부하고 그 부분도 맞춰볼 것.
             나중에 서버를 공부하게 된다면 독자적인 도메인을 만들어서 독자적인 도메인에다가 서비스를 직접 해보고, 서비스 함에 있어서 불편한 점들을 찾아볼 것.
             현재 style.css의 각 클래스 이름이 조금 통일되지 않은 느낌이 적잖게 있음. 코드의 가시성을 위해서 이 부분도 나중에 수정할 것.
  
-<Contact>
+Contact>
 
 아주대학교 미디어학과 이동환 wkazxf@ajou.ac.kr 
 
