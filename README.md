@@ -4,7 +4,7 @@
 
 https://wkazxf.github.io/Ajou-Univ-coronic-travel-path-/
 <br><br>
-<h4>Description></h4>
+<h3>Description></h3>
 
 
 ![image](https://user-images.githubusercontent.com/84431962/130308606-73989357-80bb-44b8-9867-bc9cd5ace276.png)
@@ -25,7 +25,7 @@ https://wkazxf.github.io/Ajou-Univ-coronic-travel-path-/
  
  <br><br>
  
-<h4>Feedback></h4>
+<h3>Feedback></h3>
 
 
 <h4>2021.08.21)</h4> 
@@ -41,7 +41,7 @@ https://wkazxf.github.io/Ajou-Univ-coronic-travel-path-/
  
  <br><br>
  
-<h4>Contact></h4>
+<h3>Contact></h3>
 
 아주대학교 미디어학과 이동환 wkazxf@ajou.ac.kr 
 
