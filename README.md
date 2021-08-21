@@ -18,6 +18,10 @@ https://wkazxf.github.io/Ajou-Univ-coronic-travel-path-/
 ![image](https://user-images.githubusercontent.com/84431962/130308609-14b518e5-b8fd-4744-a17d-c91cf29c0594.png)
 
 -코로나 확진자 이동 경로 조회 시 날짜를 select box를 사용해서 원하는 날짜를 입력할 수 있도록 설정. 차후 js를 적용시켜 돋보기를 누르는 경우 그에 맞춰서 원하는 날짜가 조회될 수 있도록 만들기.
+
+-지도의 출처;네이버지도
+ 
+ 
  
 <Feedback>
 
@@ -25,7 +29,7 @@ https://wkazxf.github.io/Ajou-Univ-coronic-travel-path-/
             현재 모바일에서 "데스크탑으로 보기" 를 사용하지 않는 경우 글자가 전부 깨지는 상황. 추후 반응형에 대해 조금 더 공부하고 그 부분도 맞춰볼 것.
             나중에 서버를 공부하게 된다면 독자적인 도메인을 만들어서 독자적인 도메인에다가 서비스를 직접 해보고, 서비스 함에 있어서 불편한 점들을 찾아볼 것.
             현재 style.css의 각 클래스 이름이 조금 통일되지 않은 느낌이 적잖게 있음. 코드의 가시성을 위해서 이 부분도 나중에 수정할 것.
-  
+ 
 <Contact>
 
 아주대학교 미디어학과 이동환 wkazxf@ajou.ac.kr 
