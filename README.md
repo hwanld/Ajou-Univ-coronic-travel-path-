@@ -1,9 +1,9 @@
 # Ajou-Univ-coronic-travel-path-
 
-아주대학교 교내 확진자 발생 현황 및 교내 이동 경로를 쉽고 직관적으로 볼 수 있도록 하는 웹사이트 개발 프로젝트입니다.
+<h3>아주대학교 교내 확진자 발생 현황 및 교내 이동 경로를 쉽고 직관적으로 볼 수 있도록 하는 웹사이트 개발 프로젝트입니다.
 
 https://wkazxf.github.io/Ajou-Univ-coronic-travel-path-/
-
+<br><br>
 Description>
 
 
@@ -15,7 +15,7 @@ Description>
 
 -media query는 inner class를 제작한 후 원하는 요소들은 전부 inner class를 상속시키는 방법을 활용, 980px로 만들어서 모바일 기준 해상도에도 잘 나오게끔 설정.
 
-
+<br>
 
 ![image](https://user-images.githubusercontent.com/84431962/130308609-14b518e5-b8fd-4744-a17d-c91cf29c0594.png)
 
@@ -23,7 +23,7 @@ Description>
 
 -지도의 출처;네이버지도
  
- 
+ <br><br>
  
 Feedback>
 
@@ -39,7 +39,7 @@ Feedback>
 
 -현재 우측 상단의 COVID19(질병관리청) 배너만 클릭 시 blank 가 설정되어 있지 않음. 이 부분도 차후에 수정할 것.
  
- 
+ <br><br>
  
 Contact>
 
