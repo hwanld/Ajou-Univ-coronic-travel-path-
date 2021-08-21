@@ -6,6 +6,7 @@ https://wkazxf.github.io/Ajou-Univ-coronic-travel-path-/
 
 
 Contact>
+
 아주대학교 미디어학과 이동환 wkazxf@ajou.ac.kr 
 
 아주대학교 미디어학과 김규래 kamgyul123@ajou.ac.kr
