@@ -7,4 +7,4 @@
 아주대학교 미디어학과 김규래 kamgyul123@ajou.ac.kr
 
 
-2021.08.10)
+https://wkazxf.github.io/Ajou-Univ-coronic-travel-path-/
