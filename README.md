@@ -11,6 +11,5 @@ Contact>
 
 아주대학교 미디어학과 김규래 kamgyul123@ajou.ac.kr
 
-
-![image](https://user-images.githubusercontent.com/84431962/130308601-8c062f48-2954-4ada-b208-911e1329091b.png)
-
+![image](https://user-images.githubusercontent.com/84431962/130308606-73989357-80bb-44b8-9867-bc9cd5ace276.png)
+![image](https://user-images.githubusercontent.com/84431962/130308609-14b518e5-b8fd-4744-a17d-c91cf29c0594.png)
