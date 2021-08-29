@@ -94,8 +94,8 @@ function coronicList_push(year, month, date, place, identity) {
 }
 
 //확진자 리스트에 아래의 확진자들을 추가
-coronicList_push(2021, 1, 1, [{ place: 2, hour: 17, min: 30 }, { place: 11, hour: 15, min: 50 }], "학생");
-coronicList_push(2021, 1, 1, [{ place: 3, hour: 17, min: 30 }, { place: 5, hour: 15, min: 50 }], "학생");
+coronicList_push(2021, 8, 29, [{ place: 2, hour: 17, min: 30 }, { place: 11, hour: 15, min: 50 }], "학생");
+coronicList_push(2021, 8, 29, [{ place: 3, hour: 17, min: 30 }, { place: 5, hour: 15, min: 50 }], "교직원");
 
 //0 성호관  1 아주대    2 도서관    3 체육관    4 남제관    5 용지관    6 화홍관    7 광교관    8 국제학사
 //9 팔달관  10 동관    11 다산관   12 산학원
