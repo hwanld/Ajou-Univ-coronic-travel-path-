@@ -77,7 +77,7 @@
                     </div>
                 </div>
                 <div class="head-covid19" target="_blank">
-                    <a href="http://ncov.mohw.go.kr/">COVID19 (질병관리청)</a>
+                    <a href="http://ncov.mohw.go.kr/" target="_blank">COVID19 (질병관리청)</a>
                 </div>
             </div>
     </header>
@@ -115,13 +115,13 @@
                 <div class="timeline-text">교내 코로나 확진자 이동 경로 조회</div>
                 <div class="timeline-date-container">
                     <div class="timeline-date">
-                        <select name="year">
+                        <select name="year" id="timelineYear">
                             <option value="2021">2021</option>
                         </select>
                     </div>
                     <div class="timeline-date">
 
-                        <select name="month">
+                        <select name="month" id="timelineMonth">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -137,7 +137,7 @@
                         </select>
                     </div>
                     <div class="timeline-date">
-                        <select name="date">
+                        <select name="date" id="timelineDate">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -171,15 +171,20 @@
                             <option value="31">31</option>
                         </select>
                     </div>
-                    <div class="timeline-icon"><i class="fas fa-search"></i></div>
+                    <div class="timeline-icon" id='timelineSearchIcon'><i class="fas fa-search"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!--카카오맵 api 관랸 js import-->
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5b43c3904f8652aa48cc27da8fecfa6e"></script>
+
+
     <section class="map">
         <div class="inner">
-            <img src="img/ajou-map.JPG" alt="ajou-univ-map" class="map-image">
+            <div id="map" style="width:916.02px;height:600px"></div>
         </div>
     </section>
 
@@ -204,7 +209,6 @@
         </div>
     </section>
 
-    <!-- <script scr="js.main/js"></script> : 자바스크립트 임포트, 제일 마지막에 항상 써야 됌-->
     <footer>
         <div class="inner">
             <div class="footer-message">하루 빠른 코로나19 종식을 기원합니다.</div>
@@ -214,6 +218,9 @@
             <div class="footer-copyright">Copyright 2021 © All rights reserved.</div>
         </div>
     </footer>
+    <a id="backtotop"></a>
+    <script src="js/main.js"></script>
+    <!--자바스크립트 임포트, 제일 마지막에 항상 써야 됌-->
 </body>
 
 </html>
