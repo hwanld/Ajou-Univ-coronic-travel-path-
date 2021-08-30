@@ -24,7 +24,11 @@ https://wkazxf.github.io/Ajou-Univ-coronic-travel-path-/
 -지도의 출처;네이버지도
  
  <br>
- 
+ ![image](https://user-images.githubusercontent.com/84431962/131317114-a7bf1eb3-6ce6-40a6-9398-325bd5195f50.png)
+
+-원하는 날짜를 스크롤박스에서 선택해서 우측의 돋보기 아이콘을 클릭하면 사용자가 입력한 시간에 맞춰서 그 날짜에 있던 확진자들을 지도에 보여주는 시스템. 
+
+-카카오맵 무료 API를 사용하였음.
  
  <br><br>
  
