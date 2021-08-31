@@ -132,22 +132,22 @@ coronicList_push(2021, 7, 2, [{ place: 14, s_hour: 7, s_min: 00, e_hour: 17, e_m
 coronicList_push(2021, 7, 1, [{ place: 6, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], "대학원생");
 coronicList_push(2021, 7, 2, [{ place: 6, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], "대학원생");
 coronicList_push(2021, 7, 3, [{ place: 6, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], "대학원생");
-coronicList_push(2021, 7, 8, [{ place: 1 }], "대학원생");
-coronicList_push(2021, 7, 12, [{ place: 1 }], "교수A 및 교직원");
+coronicList_push(2021, 7, 8, [{ place: 1 }], "대학원생"); //ERROR!
+coronicList_push(2021, 7, 12, [{ place: 1 }], "교수A 및 교직원"); //ERROR!
 coronicList_push(2021, 7, 26, [{ place: 16, s_hour: 9, s_min: 00, e_hour: 10, e_min: 00 }, { place: 9, s_hour: 10, s_min: 00, e_hour: 14, e_min: 00 }], "외부 공사 근로자");
 coronicList_push(2021, 7, 26, [{ place: 2, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], "자료실 면학장학생");
 coronicList_push(2021, 7, 27, [{ place: 2, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], "자료실 면학장학생");
 coronicList_push(2021, 7, 28, [{ place: 2, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], "자료실 면학장학생");
 coronicList_push(2021, 7, 29, [{ place: 2, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], "자료실 면학장학생");
-coronicList_push(2021, 8, 1, [{ place: 1 }], "재학생 2명");
-coronicList_push(2021, 7, 30, [{ place: 17, s_hour: 9, s_min: 20, e_hour: 17, e_min: 30 }], "용지관 거주 재학생");
-coronicList_push(2021, 8, 4, [{ place: 5, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], "용지관 거주 재학생");
+coronicList_push(2021, 8, 1, [{ place: 1 }], "재학생 2명"); //ERROR! //ERROR!(INDEX)
+coronicList_push(2021, 7, 30, [{ place: 17, s_hour: 9, s_min: 20, e_hour: 17, e_min: 30 }], " 거주 재학생");
+coronicList_push(2021, 8, 4, [{ place: 5, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], " 거주 재학생");
 coronicList_push(2021, 8, 2, [{ place: 16, s_hour: 8, s_min: 20, e_hour: 16, e_min: 00 }, { place: 11, s_hour: 16, s_min: 00, e_hour: 16, e_min: 15 }], "교직원");
 coronicList_push(2021, 8, 3, [{ place: 16, s_hour: 8, s_min: 20, e_hour: 11, e_min: 00 }], "교직원");
-coronicList_push(2021, 8, 6, [{ place: 8, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], "국제학사 거주 재학생");
-coronicList_push(2021, 8, 6, [{ place: 5, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], "용지관 거주 재학생");
-coronicList_push(2021, 8, 25, [{ place: 1 }], "재학생A, 대학원생A, 교직원");
-coronicList_push(2021, 8, 30, [{ place: 8, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], "국제학사 거주 재학생");
+coronicList_push(2021, 8, 6, [{ place: 8, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], " 거주 재학생");
+coronicList_push(2021, 8, 6, [{ place: 5, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], " 거주 재학생");//ERROR!
+coronicList_push(2021, 8, 25, [{ place: 1 }], "재학생A, 대학원생A, 교직원"); //ERROR!
+coronicList_push(2021, 8, 30, [{ place: 8, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], " 거주 재학생");
 
 //0 성호관  1 아주대    2 도서관    3 체육관    4 남제관    5 용지관    6 화홍관    7 광교관    8 국제학사
 //9 팔달관  10 동관    11 다산관   12 산학원   13 원천관   14 연암관   15 신학     16 율곡관   17 캠퍼스플라자
@@ -216,6 +216,15 @@ function findCoronic(yearValue, monthValue, dateValue) {
 };
 
 function makeMarker(coronicReturnList) {
+    //카카오맵 생성 및 마커 관련 API JS
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = {
+            center: new kakao.maps.LatLng(placeCoordinates[1].xpos, placeCoordinates[1].ypos), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
     let asciiNum = 65;
     for (i = 0; i < coronicReturnList.length; i++) {
         for (j = 0; j < coronicReturnList[i].place.length; j++) {
@@ -230,9 +239,12 @@ function makeMarker(coronicReturnList) {
             // 마커가 지도 위에 보이도록 표시
             marker.setMap(map);
             //인포윈도우 내용
-            if (markerIndex == 1) { var iwContent = '<div style="padding:5px;font-size:0.8rem;">' + coronicReturnList[i].identity + String.fromCharCode(asciiNum) + '<br>교내 동선 해당없음 </div>' }
+            if (markerIndex == 1) {
+                var iwContent = '<div style="padding:5px;font-size:0.7rem;">' + coronicReturnList[i].year + '년 ' + coronicReturnList[i].month +
+                    '월' + coronicReturnList[i].date + '일 <br>' + coronicReturnList[i].identity + String.fromCharCode(asciiNum) + '<br>교내 동선 해당없음 </div>'
+            }
             else {
-                var iwContent = '<div style="padding:5px;font-size:0.8rem;">' + coronicReturnList[i].year + '년 ' + coronicReturnList[i].month +
+                var iwContent = '<div style="padding:5px;font-size:0.7rem;">' + coronicReturnList[i].year + '년 ' + coronicReturnList[i].month +
                     '월' + coronicReturnList[i].date + '일 <br>' + coronicReturnList[i].place[j].s_hour + '시 ' + coronicReturnList[i].place[j].s_min + '분 ~ '
                     + coronicReturnList[i].place[j].e_hour + '시 ' + coronicReturnList[i].place[j].e_min + '분<br>' +
                     placeCoordinates[markerIndex].place + ' ' + coronicReturnList[i].identity + String.fromCharCode(asciiNum) + '</div>',
