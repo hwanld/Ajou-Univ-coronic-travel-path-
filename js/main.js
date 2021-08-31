@@ -212,10 +212,10 @@ function findCoronic(yearValue, monthValue, dateValue) {
             coronicReturnList.push(coronicList[i]);
         }
     }
-    makeMarker(coronicReturnList);
+    makeMarker(coronicReturnList, yearValue, monthValue, dateValue);
 };
 
-function makeMarker(coronicReturnList) {
+function makeMarker(coronicReturnList, yearValue, monthValue, dateValue) {
     //카카오맵 생성 및 마커 관련 API JS
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
         mapOption = {
@@ -225,41 +225,103 @@ function makeMarker(coronicReturnList) {
 
     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-    let asciiNum = 65;
-    for (i = 0; i < coronicReturnList.length; i++) {
-        for (j = 0; j < coronicReturnList[i].place.length; j++) {
-            // 마커의 위치에 대한 index
-            let markerIndex = coronicReturnList[i].place[j].place;
-            // 마커가 표시될 위치
-            var markerPosition = new kakao.maps.LatLng(placeCoordinates[markerIndex].xpos, placeCoordinates[markerIndex].ypos);
-            // 마커를 생성
-            var marker = new kakao.maps.Marker({
-                position: markerPosition
-            });
-            // 마커가 지도 위에 보이도록 표시
-            marker.setMap(map);
-            //인포윈도우 내용
-            if (markerIndex == 1) {
-                var iwContent = '<div style="padding:5px;font-size:0.7rem;">' + coronicReturnList[i].year + '년 ' + coronicReturnList[i].month +
-                    '월' + coronicReturnList[i].date + '일 <br>' + coronicReturnList[i].identity + String.fromCharCode(asciiNum) + '<br>교내 동선 해당없음 </div>'
+    //선택한 날짜에 확진자가 없는 경우
+    if (coronicReturnList.length == 0) {
+        let markerIndex = 1;
+        var markerPosition = new kakao.maps.LatLng(placeCoordinates[markerIndex].xpos, placeCoordinates[markerIndex].ypos);
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+        marker.setMap(map);
+        var iwContent = '<div style="padding:5px;font-size:0.7rem;">' + yearValue + '년 ' + monthValue +
+            '월' + dateValue + '일 <br> 교내 확진자 없음 </div>'
+
+        var infowindow = new kakao.maps.InfoWindow({
+            position: iwPosition,
+            content: iwContent
+        });
+        infowindow.open(map, marker);
+    }
+    //선택한 날짜에 확진자가 있는 경우
+    else {
+        let asciiNum = 65;
+        for (i = 0; i < coronicReturnList.length; i++) {
+            for (j = 0; j < coronicReturnList[i].place.length; j++) {
+                // 마커의 위치에 대한 index
+                let markerIndex = coronicReturnList[i].place[j].place;
+                // 마커가 표시될 위치
+                var markerPosition = new kakao.maps.LatLng(placeCoordinates[markerIndex].xpos, placeCoordinates[markerIndex].ypos);
+                // 마커를 생성
+                var marker = new kakao.maps.Marker({
+                    position: markerPosition
+                });
+                // 마커가 지도 위에 보이도록 표시
+                marker.setMap(map);
+                //인포윈도우 내용
+                if (markerIndex == 1) {
+                    var iwContent = '<div style="padding:5px;font-size:0.7rem;">' + coronicReturnList[i].year + '년 ' + coronicReturnList[i].month +
+                        '월' + coronicReturnList[i].date + '일 <br>' + coronicReturnList[i].identity + String.fromCharCode(asciiNum) + '<br>교내 동선 해당없음 </div>'
+                }
+                else {
+                    var iwContent = '<div style="padding:5px;font-size:0.7rem;">' + coronicReturnList[i].year + '년 ' + coronicReturnList[i].month +
+                        '월' + coronicReturnList[i].date + '일 <br>' + coronicReturnList[i].place[j].s_hour + '시 ' + coronicReturnList[i].place[j].s_min + '분 ~ '
+                        + coronicReturnList[i].place[j].e_hour + '시 ' + coronicReturnList[i].place[j].e_min + '분<br>' +
+                        placeCoordinates[markerIndex].place + ' ' + coronicReturnList[i].identity + String.fromCharCode(asciiNum) + '</div>',
+                        iwPosition = new kakao.maps.LatLng(placeCoordinates[0].xpos, placeCoordinates[0].ypos); //인포윈도우 표시 위치
+                }
+                // 인포윈도우를 생성합니다
+                var infowindow = new kakao.maps.InfoWindow({
+                    position: iwPosition,
+                    content: iwContent
+                });
+                // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+                infowindow.open(map, marker);
             }
-            else {
-                var iwContent = '<div style="padding:5px;font-size:0.7rem;">' + coronicReturnList[i].year + '년 ' + coronicReturnList[i].month +
-                    '월' + coronicReturnList[i].date + '일 <br>' + coronicReturnList[i].place[j].s_hour + '시 ' + coronicReturnList[i].place[j].s_min + '분 ~ '
-                    + coronicReturnList[i].place[j].e_hour + '시 ' + coronicReturnList[i].place[j].e_min + '분<br>' +
-                    placeCoordinates[markerIndex].place + ' ' + coronicReturnList[i].identity + String.fromCharCode(asciiNum) + '</div>',
-                    iwPosition = new kakao.maps.LatLng(placeCoordinates[0].xpos, placeCoordinates[0].ypos); //인포윈도우 표시 위치
-            }
-            // 인포윈도우를 생성합니다
-            var infowindow = new kakao.maps.InfoWindow({
-                position: iwPosition,
-                content: iwContent
-            });
-            // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
-            infowindow.open(map, marker);
+            asciiNum++;
         }
-        asciiNum++;
     }
 }
 
 //-------------------------------------------------------------------------------------------------------------
+
+const todayButton = document.getElementById('todayButton');
+todayButton.addEventListener('click', todayButtonClicked);
+
+function todayButtonClicked() {
+
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = today.getMonth() + 1;
+    let date = today.getDate();
+
+    findCoronic(year, month, date);
+};
+
+
+const yesterdayButton = document.getElementById('yesterdayButton');
+yesterdayButton.addEventListener('click', yesterdayButtonClicked);
+
+function yesterdayButtonClicked() {
+    let today = new Date();
+    let yesterday = new Date(today.setDate(today.getDate() - 1));
+    let year = yesterday.getFullYear();
+    let month = yesterday.getMonth() + 1;
+    let date = yesterday.getDate();
+
+    findCoronic(year, month, date);
+};
+
+const beforeYesterdayButton = document.getElementById('beforeYesterdayButton');
+beforeYesterdayButton.addEventListener('click', beforeYesterdayButtonClicked);
+
+function beforeYesterdayButtonClicked() {
+    let today = new Date();
+    let beforeYesterday = new Date(today.setDate(today.getDate() - 2));
+    let year = beforeYesterday.getFullYear();
+    let month = beforeYesterday.getMonth() + 1;
+    let date = beforeYesterday.getDate();
+
+    findCoronic(year, month, date);
+};
+
+

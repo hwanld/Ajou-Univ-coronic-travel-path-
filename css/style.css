@@ -181,6 +181,8 @@ section {
     background-color: #fff;
     margin-top:1.5rem;
     margin-bottom:1.5rem;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .timeline-container{
@@ -195,7 +197,10 @@ section {
 .timeline-date-container{
     margin: 0,1rem;
     display:flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
 
 .timeline-date{
     font-size:1rem;
@@ -206,6 +211,13 @@ section {
     font-size:1.2rem;
     font-weight:bold;
     color:#3f464d;
+}
+
+.timeline-button-container{
+    margin: 0,1rem;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .timeline-icon{
