@@ -332,3 +332,56 @@ footer {
         max-width:980px;
     }
 }
+
+
+/*모바일 css추가---------------------------------------------*/
+.head-ajou-mobile{
+    display:none;
+}
+
+.head-covid19-mobile{
+    display:none;
+}
+#map{
+    width: 916.02px;
+    height:600px
+}
+@media only all and (max-width:500px) {
+    .head-container{
+      
+    }
+    .head-ajou{
+        display: none;
+    }
+    .head-ajou-mobile{
+        display: block;
+        font-size: xx-large;
+    }
+    .head-covid19{
+        display: none;
+    }
+    .head-covid19-mobile{
+        display: block;
+        font-size: xx-large;
+    }
+    .message{
+        font-size: 1rem;
+    }
+    .inform-message{
+        font-size: 1rem;
+    }
+    .timeline-container{
+        display: block;
+    }
+    .timeline-text{
+        text-align: center;
+    }
+    .timelime-button-container{
+        display: flex;
+        justify-content: space-around;
+    }
+    #map{
+        width: 100%;
+        height:400px
+    }
+}
