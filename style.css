@@ -1,0 +1,454 @@
+* { 
+    /*박스의 크기는 보더를 포함_박스별 크기가 달라지는 것을 막기 위한 코드*/
+    box-sizing: border-box;
+}
+
+body {
+    /*가운데 정렬을 위한 margin 설정*/
+    margin: 0 auto;
+    color: #3f464d;
+    /*html파일 전체의 폰트를 별도의 설정이 없는 경우 아래와 같이 설정*/
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif'; 
+}
+
+a {
+    all: unset;
+} /*가상 클래스 a에 대한 설정*/
+
+a:link {
+    text-decoration: none;
+    color:#fff;
+}
+
+a:visited {
+    text-decoration:none;
+    color:#fff;
+}
+
+a:active {
+    text-decoration:none;
+    color:3f464d;
+}
+
+a:hover {
+    text-decoration:none;
+    color:3f464d;
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    overflow:hidden;
+}
+
+header{
+    width: 100%;
+    height: 60px; 
+    background-color: rgb(0,36,80);/*==#ffffff*/
+    position: fixed; /*header태그가 고정*/
+    top: 0;
+    left: 0;
+    z-index: 1000; /*다른 요소들보다 위에 떠 있을 수 있도록 하기*/
+}
+
+.head-container{
+    width: 100%;
+    height: 100%;
+    display: flex; /*블록 특성의 flex container 설정*/
+    justify-content: space-between; /*수평정렬*/
+    align-items: center; /*수직 정렬*/
+}
+
+.head-container .head-ajou { /*클래스 내부 클래스를 지정할 때 반드시 띄워쓰기 필수!*/
+    font-size: 1.2rem;
+}
+
+.head-container .head-ajou a:hover { /*head-brand 클래스의 가상 클래스 a:hover*/
+    color: #2186c4;
+    cursor: pointer;
+}
+
+.head-container .head-covid19 {
+    font-size: 1.2rem;
+}
+
+.head-container .head-covid19 a:hover { /*head-blog 클래스의 가상 클래스 a:hover*/
+    color: #2186c4;
+    cursor: pointer;
+}
+
+.head-container .img-container{
+    justify-content:center;
+    display:flex;
+    align-items:center;
+}
+
+.head-container .head-img {
+    max-width: 45px;
+}
+
+.head-container .head-img a:hover {
+    cursor:pointer;
+}
+
+.head-container .logo-img{
+    max-width: 160px;
+}
+
+.head-container .logo-img a:hover {
+    cursor:pointer;
+}
+
+section {
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+
+.main {
+    height: 360px;
+    background-image: url("image/main-background.jpg");
+    background-repeat: no-repeat no-repeat;
+    background-size: cover;
+    background-position: center 10%;
+    z-index: 1;
+    margin-bottom:1rem;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,36,80);
+    opacity: 0.6;
+    z-index: 2;
+    margin-top: 60px;
+}
+
+.title-container{
+    padding-top:100px;
+    padding-bottom:100px;
+}
+
+.title{
+    font-size: 2rem;
+    font-weight: bold;
+    color:#fff;
+    margin-bottom:3rem;
+}
+
+.message{
+    font-size: 1.4rem;
+    font-weight: normal;
+    color:#fff;
+    line-height:2rem;
+}
+
+.map {
+    width:100%;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.inform {
+    width:100%;
+    height:100%;
+    background-color: rgb(0,36,80);
+    opacity : 0.6;
+}
+
+.inform-container{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.inform-message{
+    font-size:1.3rem;
+    color:#fff;
+    margin: 2rem 0;
+}
+
+.inform-message a:hover{
+    cursor:pointer;
+    color: #2186c4;
+}
+
+.timeline {
+    width: 100%;
+    height:100%;
+    background-color: #fff;
+    margin-top:1.5rem;
+    margin-bottom:1.5rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.timeline-container{
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    padding:0.2rem;
+}
+
+.timeline-date-container{
+    margin: 0,1rem;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.timeline-date{
+    font-size:1rem;
+    margin-left:0.5rem;
+}
+
+.timeline-text{
+    font-size:1.2rem;
+    font-weight:bold;
+    color:#3f464d;
+}
+
+.timeline-button-container{
+    margin: 0,1rem;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.timeline-button{
+    background-color:rgb(235,235,235);
+    color:black;
+    padding:0,3rem;
+    margin-left:0.2rem;
+    margin-right:0.2rem;
+    border:1px solid rgb(47,48,49);
+    border-radius:3px;
+}
+
+.timeline-icon{
+    font-size:1.5rem;
+    margin-left:0.5rem;
+}
+
+.timeline-icon:hover {
+    cursor:pointer;
+}
+
+.notice{
+    width:100%;
+    height:100%;
+    margin-top:2rem;
+}
+
+.notice-container{
+    width:100%;
+    height:100%;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    padding:2rem;
+}
+
+.notice-title{
+    color:#3f464d;
+    font-size:1.5rem;
+    font-weight:bold;
+    margin-bottom:1rem;
+}
+
+.notice-message{
+    color:#3f464d;
+    font-size:1.0rem;
+    margin-bottom:0.5rem;
+    line-height: 1.2rem;
+}
+
+.notice-message-amphasize{
+    color:red;
+    text-decoration:underline solid 1px black;
+}
+
+footer {
+    background-color:rgb(0,36,80);
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+
+.footer-message{
+    color:#fff;
+    margin-top:0.5rem;
+    margin-bottom:2rem;
+    margin-left:0.5rem;
+}
+
+
+.footer-contact{
+    font-size:0.8rem;
+    color:#fff;
+    margin-bottom:0.5rem;
+    margin-left:0.5rem;
+}
+.footer-copyright{
+    color:#fff;
+    font-size:0.8rem;
+    margin-bottom:0.5rem;
+    margin-left:0.5rem;
+}
+
+#backtotop {
+    background-color : rgb(47,48,49);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    
+    border-radius : 20px;
+    position : fixed;
+    bottom:30px;
+    right: 30px;
+    transition-property: background-color, opacity, visibility;
+    transition-duration: 0.3s, 0,5s,0.5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index:999;
+}
+
+#backtotop:after {
+    content:"\f077";
+    font-family: FontAwesome;
+    font-size: 1.5rem;
+    line-height : 40px;    
+    color: #fff;
+}
+
+#backtotop.show {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgb(47,48,49);
+}
+
+#backtotop:hover {
+    cursor:pointer;
+    background-color: #2186c4;
+}   
+
+/*미디어 쿼리 설정*/
+@media only screen and (min-width:1200px) {
+    /*inner의 최대 가로 길이는 1200px_그 이상에서는 중앙정렬로 좌우 여백*/
+    .inner {
+        max-width:980px;
+    }
+}
+
+/*모바일 css추가---------------------------------------------*/
+.head-ajou-mobile{
+    display:none;
+}
+
+.head-covid19-mobile{
+    display:none;
+}
+#map{
+    width: 916.02px;
+    height:600px
+}
+@media only all and (max-width:500px) {
+    .head-ajou{
+        display: none;
+    }
+    .head-ajou-mobile{
+        display: block;
+        font-size: xx-large;
+    }
+    .head-covid19{
+        display: none;
+    }
+    .head-covid19-mobile{
+        display: block;
+        font-size: xx-large;
+    }
+    .main {
+    height: 240px;
+    background-image: url("image/main-background.jpg");
+    background-repeat: no-repeat no-repeat;
+    background-size: cover;
+    background-position: center 10%;
+    z-index: 1;
+    margin-bottom:1rem;
+    }
+    .title-container{
+    padding-top:40px;
+    padding-bottom:100px;
+    }
+    .title{
+    font-size: 1.2rem;
+    color:#fff;
+    margin-bottom:1.5rem;
+    line-height:2.0rem;
+    }
+    .message{
+        font-size: 0.8rem;
+        line-height:1.5rem;
+    }
+    .inform-message{
+        font-size: 0.8rem;
+    }
+    .timeline-container{
+        display: block;
+    }
+    .timeline-button{
+        background-color:rgb(235,235,235);
+        color:black;
+        padding:0,3rem;
+        margin-left:0.3rem;
+        margin-right:0.3rem;
+        border:1px solid rgb(47,48,49);
+    }
+    .timeline-text{
+        text-align: center;
+        font-size:1rem;
+    }
+    .timelime-button-container{
+        font-size:0.8rem;
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+    }
+
+    .timeline-date-container{
+        display: flex;
+        justify-content: center;
+        margin-top:5px;
+    }
+    .timeline-date{
+        font-size : 0.8rem;
+        margin-left:0.2rem;
+        margin-right:0.2rem;
+    }
+    .notice-container{
+    width:100%;
+    height:100%;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    padding:1rem;
+    text-align-last:auto;
+    }
+    .notice-title{
+    color:#3f464d;
+    font-size:1rem;
+    font-weight:bold;
+    margin-bottom:0.8rem;
+    }
+    .notice-message{
+    color:#3f464d;
+    font-size:0.8rem;
+    margin-bottom:0.3rem;
+    line-height: 1.1rem;
+    }
+    #map{
+        width: 100%;
+        height:400px
+    }
+}
