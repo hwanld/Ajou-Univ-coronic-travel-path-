@@ -64,6 +64,10 @@
                     <a href="https://www.ajou.ac.kr/kr/ajou/coronavirus-infection-19-school-response-guidance.do"
                         target="_blank">코로나19 학교 대응 안내</a>
                 </div>
+                <div class="head-ajou-mobile">
+                    <a href="https://www.ajou.ac.kr/kr/ajou/coronavirus-infection-19-school-response-guidance.do"
+                        target="_blank">=</a>
+                </div>
                 <div class="img-container">
                     <div class="head-img">
                         <a href="https://www.ajou.ac.kr/kr/index.do" target="_blank">
@@ -78,6 +82,9 @@
                 </div>
                 <div class="head-covid19" target="_blank">
                     <a href="http://ncov.mohw.go.kr/" target="_blank">COVID19 (질병관리청)</a>
+                </div>
+                <div class="head-covid19-mobile" target="_blank">
+                    <a href="http://ncov.mohw.go.kr/" target="_blank">></a>
                 </div>
             </div>
     </header>
@@ -118,9 +125,9 @@
             <div class="timeline-container">
                 <div class="timeline-text">교내 코로나 확진자 이동 경로 조회</div>
                 <div class="timelime-button-container">
-                    <input type='button' value='오늘' id='todayButton' />
-                    <input type='button' value='어제' id='yesterdayButton' />
-                    <input type='button' value='그저께' id='beforeYesterdayButton' />
+                    <button class="timeline-button" id='todayButton'>오늘</button>
+                    <button class='timeline-button' id='yesterdayButton'>어제</button>
+                    <button class='timeline-button' id='beforeYesterdayButton'>그저께</button>
                 </div>
                 <div class="timeline-date-container">
                     <div class="timeline-date">
@@ -192,7 +199,7 @@
 
     <section class="map">
         <div class="inner">
-            <div id="map" style="width:916.02px;height:600px"></div>
+            <div id="map"></div>
         </div>
     </section>
 
