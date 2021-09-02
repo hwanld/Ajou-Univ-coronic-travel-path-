@@ -294,6 +294,10 @@ function todayButtonClicked() {
     let month = today.getMonth() + 1;
     let date = today.getDate();
 
+    document.getElementById("timeline-date-default").innerHTML = today.getDate();
+    document.getElementById("timeline-month-default").innerHTML = today.getMonth() + 1;
+    document.getElementById("timeline-year-default").innerHTML = today.getFullYear();
+
     findCoronic(year, month, date);
 };
 
@@ -308,6 +312,10 @@ function yesterdayButtonClicked() {
     let month = yesterday.getMonth() + 1;
     let date = yesterday.getDate();
 
+    document.getElementById("timeline-date-default").innerHTML = yesterday.getDate();
+    document.getElementById("timeline-month-default").innerHTML = yesterday.getMonth() + 1;
+    document.getElementById("timeline-year-default").innerHTML = yesterday.getFullYear();
+
     findCoronic(year, month, date);
 };
 
@@ -321,7 +329,16 @@ function beforeYesterdayButtonClicked() {
     let month = beforeYesterday.getMonth() + 1;
     let date = beforeYesterday.getDate();
 
+    document.getElementById("timeline-date-default").innerHTML = beforeYesterday.getDate();
+    document.getElementById("timeline-month-default").innerHTML = beforeYesterday.getMonth() + 1;
+    document.getElementById("timeline-year-default").innerHTML = beforeYesterday.getFullYear();
+
     findCoronic(year, month, date);
 };
 
+//--------------------------------------------------------------------------------------------------------------
 
+let today = new Date();
+document.getElementById("timeline-date-default").innerHTML = today.getDate();
+document.getElementById("timeline-month-default").innerHTML = today.getMonth() + 1;
+document.getElementById("timeline-year-default").innerHTML = today.getFullYear();
