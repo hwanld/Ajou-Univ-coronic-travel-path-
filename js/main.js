@@ -149,6 +149,7 @@ coronicList_push(2021, 8, 6, [{ place: 5, s_hour: 0, s_min: 00, e_hour: 24, e_mi
 coronicList_push(2021, 8, 25, [{ place: 1 }], "재학생A, 대학원생A, 교직원"); //ERROR!
 coronicList_push(2021, 8, 30, [{ place: 8, s_hour: 0, s_min: 00, e_hour: 24, e_min: 00 }], " 거주 재학생");
 coronicList_push(2021, 8, 29, [{ place: 13, s_hour: 9, s_min: 00, e_hour: 18, e_min: 00 }], "재학생 2명");
+coronicList_push(2021, 9, 8, [{ place: 1 }], "재학생");
 
 //0 성호관  1 아주대    2 도서관    3 체육관    4 남제관    5 용지관    6 화홍관    7 광교관    8 국제학사
 //9 팔달관  10 동관    11 다산관   12 산학원   13 원천관   14 연암관   15 신학     16 율곡관   17 캠퍼스플라자
@@ -189,6 +190,12 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
 
+let today = new Date();
+document.getElementById("timeline-date-default").innerHTML = today.getDate();
+document.getElementById("timeline-month-default").innerHTML = today.getMonth() + 1;
+document.getElementById("timeline-year-default").innerHTML = today.getFullYear();
+
+findCoronic(today.getFullYear(), today.getMonth() + 1, today.getDate());
 //-------------------------------------------------------------------------------------------------------------
 
 const timeline = document.getElementById('timelineSearchIcon');
@@ -339,7 +346,3 @@ function beforeYesterdayButtonClicked() {
 
 //--------------------------------------------------------------------------------------------------------------
 
-let today = new Date();
-document.getElementById("timeline-date-default").innerHTML = today.getDate();
-document.getElementById("timeline-month-default").innerHTML = today.getMonth() + 1;
-document.getElementById("timeline-year-default").innerHTML = today.getFullYear();
