@@ -156,6 +156,7 @@ coronicList_push(2021, 09, 28, [{ place: 1 }], "재학생 2명");
 coronicList_push(2021, 10, 06, [{ place: 1 }], "재학생");
 coronicList_push(2021, 10, 15, [{ place: 1 }], "신축공사 현장 근로자")
 coronicList_push(2021, 10, 18, [{ place: 1 }], "재학생");
+coronicList_push(2021, 10, 25, [{ place: 11, s_hour: 11, s_min: 00, e_hour: 11, e_min: 05 }], "재학생A 및 대학원생");
 //0 성호관  1 아주대    2 도서관    3 체육관    4 남제관    5 용지관    6 화홍관    7 광교관    8 국제학사
 //9 팔달관  10 동관    11 다산관   12 산학원   13 원천관   14 연암관   15 신학     16 율곡관   17 캠퍼스플라자
 
