@@ -174,6 +174,9 @@ coronicList_push(2021, 11, 23, [{ place: 16, s_hour: 10, s_min: 00, e_hour: 10, 
 coronicList_push(2021, 11, 27, [{ place: 18, s_hour: 15, s_min: 20, e_hour: 23, e_min: 35 }], "재학생");
 coronicList_push(2021, 11, 28, [{ place: 18, s_hour: 21, s_min: 25, e_hour: 2, e_min: 10 }], "재학생");
 coronicList_push(2021, 12, 09, [{ place: 9, s_hour: 15, s_min: 00, e_hour: 17, e_min: 40 }], "대학원생");
+coronicList_push(2021, 12, 17, [{ place: 6, s_hour: 08, s_min: 00, e_hour: 18, e_min: 00 }], "기타 직원");
+coronicList_push(2021, 12, 20, [{ place: 6, s_hour: 08, s_min: 00, e_hour: 08, e_min: 20 }], "기타 직원");
+coronicList_push(2021, 12, 15, [{ place: 11, s_hour: 19, s_min: 30, e_hour: 21, e_min: 00 }], "대학원생");
 //0 성호관  1 아주대    2 도서관    3 체육관    4 남제관    5 용지관    6 화홍관    7 광교관    8 국제학사
 //9 팔달관  10 동관    11 다산관   12 산학원   13 원천관   14 연암관   15 신학     16 율곡관   17 캠퍼스플라자
 //18 서관
